@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -x
 AWS_REGION="eu-west-3"
 
 ARTIFACT=`packer build -machine-readable packer-demo.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
