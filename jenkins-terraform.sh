@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-
+git add --chmod=+x
 AWS_REGION="eu-west-3"
 
 ARTIFACT=`packer build -machine-readable packer-demo.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
