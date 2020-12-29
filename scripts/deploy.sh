@@ -1,6 +1,6 @@
 #!/bin/bash
-apt-get update
-apt-get install -y nginx nodejs npm
+sudo apt-get update
+sudo apt-get install -y nginx nodejs npm
 
 groupadd node-demo
 useradd -d /app -s /bin/false -g node-demo node-demo
@@ -31,7 +31,7 @@ http {
 service nginx restart
 
 cd /app
-npm install
+sudo npm install
 
 echo '[Service]
 ExecStart=/usr/bin/nodejs /app/index.js
